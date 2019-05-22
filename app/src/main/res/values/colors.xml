@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#ffffff</color>
+    <!--<color name="colorPrimaryDark">#000000</color>-->
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#000000</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="status_bar_color">#000000</color>
+
+    <color name="payva_red">#FF0000</color>
+    <color name="payva_green">#20B700</color>
 </resources>

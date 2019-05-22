@@ -48,8 +48,10 @@ class Launcher : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_manage_expense)
+        setContentView(R.layout.activity_accountant)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
         mVisible = true
 

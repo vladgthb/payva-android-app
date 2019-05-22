@@ -8,46 +8,305 @@
         android:background="@android:color/white"
         >
 
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/hr_avatar"
+
+            android:layout_marginTop="64dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/payva_red"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:text="Barbara Klein"
+    android:fontFamily="@font/payva_font"
+    android:textStyle="bold"
+              android:textColor="@android:color/black"
+    android:textSize="18sp"
+              android:layout_below="@+id/profile_image"
+    android:id="@+id/name"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:textAlignment="center"
+              android:text="HR Manager"
+              android:fontFamily="@font/payva_font"
+              android:textStyle="bold"
+              android:textColor="@android:color/black"
+              android:textSize="12sp"
+              android:layout_below="@+id/name"
+              android:id="@+id/position"/>
+
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:id="@+id/fullscreen_content"
                   tools:context=".Launcher"
+                  android:layout_below="@+id/position"
                   android:orientation="vertical"
-    android:paddingTop="50dp"
+    android:paddingTop="16dp"
     android:paddingEnd="16dp"
     android:paddingStart="16dp">
 
         <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="150dp"
                 card_view:cardBackgroundColor="#E7E7E7"
                 card_view:cardCornerRadius="8dp"
                 card_view:cardElevation="8dp">
 
             <!-- Main Content View -->
             <RelativeLayout android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="16dp">
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:layout_centerVertical="true"
+                          android:layout_alignParentTop="true"
+                          android:textAlignment="center"
                           android:text="Requested Expenses"
                           android:fontFamily="@font/payva_font"
                           android:textSize="16sp"
+                          android:id="@+id/title_expense"
                           android:textColor="@android:color/black"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                android:orientation="horizontal"
+                              android:layout_below="@+id/title_expense"
+                              android:layout_alignParentEnd="true">
+
+                    <RelativeLayout android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                        <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/petrol"
+                        android:id="@+id/petrol_icon"/>
+
+                        <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:text="3"
+                                  android:layout_toEndOf="@+id/petrol_icon"
+                                  android:layout_above="@+id/petrol_icon"
+                                  android:textColor="@color/payva_red"
+                                  android:fontFamily="@font/payva_font"
+                        />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                        <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                                   android:layout_centerInParent="true"
+                                   android:src="@drawable/taxi"
+                                   android:id="@+id/taxi_icon"/>
+
+                        <TextView android:layout_width="16dp" android:layout_height="16dp"
+                                  android:text="12"
+                                  android:layout_toEndOf="@+id/taxi_icon"
+                                  android:layout_above="@+id/taxi_icon"
+                                  android:textColor="@color/payva_red"
+                                  android:fontFamily="@font/payva_font"
+                        />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                        <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                                   android:layout_centerInParent="true"
+                                   android:src="@drawable/meal"
+                                   android:id="@+id/meal_icon"/>
+
+                        <TextView android:layout_width="16dp" android:layout_height="16dp"
+                                  android:text="1"
+                                  android:layout_toEndOf="@+id/meal_icon"
+                                  android:layout_above="@+id/meal_icon"
+                                  android:textColor="@color/payva_red"
+                                  android:fontFamily="@font/payva_font"
+                        />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                        <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                                   android:layout_centerInParent="true"
+                                   android:src="@drawable/gym"
+                                   android:id="@+id/gym_icon"/>
+
+                        <TextView android:layout_width="16dp" android:layout_height="16dp"
+                                  android:text="20"
+                                  android:layout_toEndOf="@+id/gym_icon"
+                                  android:layout_above="@+id/gym_icon"
+                                  android:textColor="@color/payva_red"
+                                  android:fontFamily="@font/payva_font"
+                        />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="100dp">
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="32dp"
+                card_view:cardBackgroundColor="#E7E7E7"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp">
 
-            <TextView android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_centerVertical="true"
-            android:text="Requested Expenses"
-                      android:fontFamily="@font/payva_font"
-                      android:textSize="16sp"
-            android:textColor="@android:color/black"/>
+            <!-- Main Content View -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        </RelativeLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="2"
+                          android:text="Expenses per department"
+                          android:textAlignment="center"
+                          android:textColor="@android:color/black"
+                          android:textSize="16sp"
+                          android:fontFamily="@font/payva_font"
+                />
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Development"
+                              android:layout_alignParentStart="true"
+                              android:layout_centerVertical="true"
+                              android:textColor="@android:color/black"
+                              android:textStyle="bold"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="750$"
+                              android:layout_centerVertical="true"
+                              android:layout_alignParentEnd="true"
+                              android:textColor="@android:color/black"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Support"
+                              android:layout_alignParentStart="true"
+                              android:layout_centerVertical="true"
+                              android:textColor="@android:color/black"
+                              android:textStyle="bold"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="1200$"
+                              android:layout_centerVertical="true"
+                              android:layout_alignParentEnd="true"
+                              android:textColor="@android:color/black"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Delivery"
+                              android:layout_alignParentStart="true"
+                              android:layout_centerVertical="true"
+                              android:textColor="@android:color/black"
+                              android:textStyle="bold"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="2080$"
+                              android:layout_centerVertical="true"
+                              android:layout_alignParentEnd="true"
+                              android:textColor="@android:color/black"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Packaging"
+                              android:layout_alignParentStart="true"
+                              android:layout_centerVertical="true"
+                              android:textColor="@android:color/black"
+                              android:textStyle="bold"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="130$"
+                              android:layout_centerVertical="true"
+                              android:layout_alignParentEnd="true"
+                              android:textColor="@android:color/black"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="Facility"
+                              android:layout_alignParentStart="true"
+                              android:layout_centerVertical="true"
+                              android:textColor="@android:color/black"
+                              android:textStyle="bold"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+                              android:text="210$"
+                              android:layout_centerVertical="true"
+                              android:layout_alignParentEnd="true"
+                              android:textColor="@android:color/black"
+                              android:fontFamily="@font/payva_font"
+                    />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Create Financial Rule"
+                android:layout_marginTop="16dp"
+        android:textColor="@color/payva_green"/>
 
 
     </LinearLayout>
